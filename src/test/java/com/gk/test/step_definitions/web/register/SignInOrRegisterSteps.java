@@ -1,7 +1,7 @@
-package com.gk.test.step_definitions.gui.register;
+package com.gk.test.step_definitions.web.register;
 
 import com.gk.test.framework.helpers.Props;
-import com.gk.test.page_objects.gui.SignInOrRegisterPage;
+import com.gk.test.page_objects.web.SignInOrRegisterPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

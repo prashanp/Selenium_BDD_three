@@ -1,7 +1,7 @@
-package com.gk.test.step_definitions.gui;
+package com.gk.test.step_definitions.web;
 
-import com.gk.test.page_objects.gui.MyAccountSummaryPage;
-import com.gk.test.step_definitions.gui.register.NewRegistrationSteps;
+import com.gk.test.page_objects.web.MyAccountSummaryPage;
+
 import cucumber.api.java.en.Then;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,11 +9,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MyAccountSummarySteps {
 
-    private NewRegistrationSteps newRegistrationSteps;
+    
     private MyAccountSummaryPage myAccountSummaryPage;
 
-    public MyAccountSummarySteps(MyAccountSummaryPage myAccountSummaryPage, NewRegistrationSteps newRegistrationSteps) {
-        this.newRegistrationSteps = newRegistrationSteps;
+    public MyAccountSummarySteps(MyAccountSummaryPage myAccountSummaryPage) {
         this.myAccountSummaryPage = myAccountSummaryPage;
     }
 

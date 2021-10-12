@@ -1,7 +1,7 @@
-package com.gk.test.step_definitions.gui;
+package com.gk.test.step_definitions.web;
 
 
-import com.gk.test.page_objects.gui.HomePage;
+import com.gk.test.page_objects.web.HomePage;
 import cucumber.api.java.en.Given;
 
 public class HomePageSteps {

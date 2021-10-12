@@ -1,4 +1,4 @@
-package com.gk.test.step_definitions.gui;
+package com.gk.test.step_definitions.web;
 
 
 import com.gk.test.framework.helpers.UrlBuilder;

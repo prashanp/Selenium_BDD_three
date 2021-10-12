@@ -1,0 +1,1 @@
+mvn clean install -Dcucumber.options="--tags @database" -P web

@@ -1,4 +1,4 @@
-package com.gk.test.page_objects.gui;
+package com.gk.test.page_objects.web;
 
 import com.gk.test.framework.PageObject;
 import org.openqa.selenium.By;

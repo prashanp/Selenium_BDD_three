@@ -2,7 +2,7 @@
 #Every feature file starts with "Feature:" Keyword which describes what Feature is under test.
 #tags are used for running entire Feature, a single Scenario or group of Feature or Scenarios.
 #Tags are annotated with "@" symbol
-@gui
+@web
 Feature: REGISTER:- As a new customer I would like to register so I can : -
 
   #This is a typical scenario Example. Every Scenario starts with "Scenario:" keyword.

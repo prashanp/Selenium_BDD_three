@@ -25,12 +25,17 @@ public class DatabaseSteps {
 
     @When("^I run query \"([^\"]*)\" to get list of users in record set$")
     public void I_run_query_to_get_list_of_users_in_record_set(String sqlQuery) throws Throwable {
-        results = userRegDB.executeQuery(Props.getMessage(sqlQuery));
+        results = userRegDB.executeQuery("SELECT TOP 1 cs.paid from PA.CertificationStatus cs where PaStatusId=1 and cs.paid IS NOT NULL ORDER BY NEWID()");
+		  System.out.println(userRegDB.executeQuery("SELECT TOP 1 cs.paid from PA.CertificationStatus cs where PaStatusId=1 and cs.paid IS NOT NULL ORDER BY NEWID()"));
+
+
     }
 
     @When("^I run query \"([^\"]*)\" to get list of users in bean$")
     public void I_run_query_to_get_list_of_users_in_bean(String sqlQuery) throws Throwable {
-        userRegModels = userRegDB.getUserRegResults(Props.getMessage(sqlQuery));
+        results = userRegDB.executeQuery("select TOP 1 cs.paid FROM Pa.CertificationStatus cs JOIN Pa p ON p.PAID = cs.PaId JOIN PAContact pc on pc.PAID = cs.PaId JOIN Account.[User] a ON a.UserId = p.UserId WHERE cs.PaStatusId = 2 AND cs.CertificationProductId = 1 AND a.UserName IS NOT NULL AND pc.ObsoleteTime IS NULL AND pc.BadAddress = 0 AND pc.BadEmail = 0 ORDER BY NEWID()");
+		  System.out.println(userRegDB.executeQuery("select TOP 1 cs.paid FROM Pa.CertificationStatus cs JOIN Pa p ON p.PAID = cs.PaId JOIN PAContact pc on pc.PAID = cs.PaId JOIN Account.[User] a ON a.UserId = p.UserId WHERE cs.PaStatusId = 2 AND cs.CertificationProductId = 1 AND a.UserName IS NOT NULL AND pc.ObsoleteTime IS NULL AND pc.BadAddress = 0 AND pc.BadEmail = 0 ORDER BY NEWID()"));
+
     }
 
     @Then("^the list of users is not empty$")

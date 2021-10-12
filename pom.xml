@@ -13,12 +13,12 @@
     <profiles>
         <!-- Development environment @ my local machine -->
         <profile>
-            <id>dev</id>
+            <id>web</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <profile.path>/profiles/dev/config.properties</profile.path>
+                <profile.path>/profiles/web/config.properties</profile.path>
                 <testToRun>**/*SingleSuite*.class</testToRun>
             </properties>
         </profile>
@@ -370,11 +370,12 @@
             <version>${mysql}</version>
         </dependency>
         <!--mysql database driver-->
-	<dependency>
+	    <dependency>
     		<groupId>com.microsoft.sqlserver</groupId>
-    		<artifactId>sqljdbc4</artifactId>
-    		<version>4.0</version>
-	</dependency>
+    		<artifactId>mssql-jdbc</artifactId>
+    		<version>7.4.1.jre8</version>
+	    </dependency>
+
 
         <!--jackson for api-->
 
